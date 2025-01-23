@@ -9,17 +9,21 @@ def create_and_filter_data():
     4) Zwróć przefiltrowany DataFrame.
     """
     # ustaw ziarno losowości np. np.random.seed(123)
+    np.random.seed(123)
+
 
     # np.random.randint(...) - stwórz losową tablicę (rozmiar i zakres do wyboru)
-    # arr = ...
-
-    # df = 
+    arr = np.random.randint(0, 100, size=(10, 2))  # 10 wierszy, 2 kolumny
 
 
-    # filtered_df = ...  
+    df = pd.DataFrame(arr, columns=['A', 'B'])
+
+
+    filtered_df = df[df['A'] > 50]
 
     # return ...
-    pass
+    return filtered_df
+
 
 if __name__ == '__main__':
     # Przykładowe wywołanie
